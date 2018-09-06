@@ -44,7 +44,7 @@ def build_mymodel(model, ch=3, row=160, col=320):
     model.add(MaxPool2D(pool_size=(2,2)))
 
     # convolutional
-    model.add(Conv2D(48, (3, 3), strides=(1,1), padding='same'))
+    model.add(Conv2D(96, (3, 3), strides=(1,1), padding='same'))
     model.add(BatchNormalization(epsilon=1e-07))
     model.add(Activation('relu'))
     

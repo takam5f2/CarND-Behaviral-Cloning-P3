@@ -40,5 +40,5 @@ plot_model(model, to_file='mymodel.png')
 model.compile(loss='mse', optimizer='adam')
 model.fit_generator(train_generator, steps_per_epoch = len(train_samples)/8,
                     validation_data=validation_generator,
-                    validation_steps = len(validation_samples)/8, epochs=5)
+                    validation_steps = len(validation_samples)/8, epochs=10)
 model.save('model.h5')
