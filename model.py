@@ -56,6 +56,11 @@ def build_mymodel(model, ch=3, row=160, col=320):
     model.add(BatchNormalization(epsilon=1e-07))
     model.add(Activation('relu'))
     model.add(Dropout(0.5))
+
+    model.add(Dense(800))
+    model.add(BatchNormalization(epsilon=1e-07))
+    model.add(Activation('relu'))
+    model.add(Dropout(0.5))
     
     model.add(Dense(600)) 
     model.add(BatchNormalization(epsilon=1e-07))
