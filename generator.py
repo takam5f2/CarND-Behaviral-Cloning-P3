@@ -29,16 +29,3 @@ def generator(samples, batch_size=32, img_path='../small_dataset/IMG/'):
             y_train = np.array(angles)
             yield sklearn.utils.shuffle(X_train, y_train)
 
-def get_all_center(samples, img_path='../small_dataset/IMG/'):
-    images = []
-    angles = []
-    for sample in samples:
-        name = img_path+sample[0].split('/')[-1]
-        center_image = ndimage.imread(name)
-        center_angle = float(sample[3])
-        images.append(center_image)
-        angles.append(center_angle)
-
-    x_train = np.array(images)
-    y_train = np.array(angles)
-    return x_train, y_train
